@@ -1,68 +1,190 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
+  font-family: 'Poppins', sans-serif;
+  background: #181818;
+  color: #EAEAEA;
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  transition: all 0.3s ease;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Main Page Container */
+.page-container {
+  background: rgba(255, 255, 255, 0.1); /* Subtle glass effect */
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 50px;
+  max-width: 1200px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Hover Effect on Container */
+.page-container:hover {
+  transform: scale(1.02);
+}
+
+/* Headings and Titles */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Buttons */
+button, .btn {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 40px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #1a73e8, #64b5f6); /* Blue gradient */
+  color: white;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+button:hover, .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #64b5f6, #1a73e8);
+}
+
+/* Card Styles */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect on Cards */
+.card:hover {
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Text inside cards */
+.card p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+/* Input Fields */
+input[type="number"] {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #444;
+  background-color: #333;
+  color: #fff;
+  width: 48%;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+/* Focused Input */
+input[type="number"]:focus {
+  outline: none;
+  border-color: #64b5f6;
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+table th, table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+table th {
+  background: #333;
+  color: #fff;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background: #222;
+}
+
+table tr:hover {
+  background-color: #1a73e8;
+  cursor: pointer;
+  color: white;
+}
+
+/* Dashboard Specific Styles */
+.admin-dashboard {
+  background: linear-gradient(135deg, #24292f, #555f71);
+}
+
+.teacher-dashboard {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.student-dashboard {
+  background: linear-gradient(135deg, #34495e, #5d6d7e);
+}
+
+/* Navbar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+nav a:hover {
+  background: #444;
+  color: #1a73e8;
+  border-radius: 5px;
+}
+
+/* Animation Effects */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  to {
+    opacity: 1;
   }
 }

@@ -50,17 +50,13 @@ const registerSubjectForTeacher = async (req, res) => {
 
 
 router.post('/register', registerSubjectForTeacher);
-
-router.get('/my-subjects', verifyToken, allowRoles('teacher'), async (req, res) => {
+router.get('/all-subjects', async (req, res) => {
   try {
-    const teacherId = req.user.id; // comes from token
-
-    const subjects = await Subject.find({ teacher: teacherId });
-
+    const subjects = await Subject.find(); // fetch all subjects in db
     res.status(200).json({ subjects });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: "Server error while fetching all subjects" });
   }
 });
 

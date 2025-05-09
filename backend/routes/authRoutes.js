@@ -11,7 +11,7 @@ const jwt = require('jsonwebtoken');
 // Register
 router.post("/register", async (req, res) => {
   try {
-    const { name, email, password, role, registrationNo, department, batch, gpa } = req.body;
+    const { name, email, password, role, registrationNo, department, batch, gpa,subjectname } = req.body;
 
     //const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({ name, email, password, role });
@@ -21,19 +21,19 @@ router.post("/register", async (req, res) => {
    
 
     // If student → create student record
-    if (role === "student") {
-      const subjects = await Subject.find({ department });
+     if (role === "student") {
+      // Ensure subjectname is an array
+      const finalSubjects = Array.isArray(subjectname) ? subjectname : [];
 
-     const subjectNames = subjects.map(sub => sub.name);
       const newStudent = new Student({
-        userId: newUser._id, // 👈 here's the fix
+        userId: newUser._id,
         name,
         registrationNo,
         department,
         batch,
         email,
         gpa,
-        subjectname: subjectNames  
+        subjectname: finalSubjects
       });
       await newStudent.save();
     }
@@ -90,6 +90,69 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
+// ✅ Get All Students
+router.get('/students', async (req, res) => {
+  try {
+    const students = await Student.find();
+    res.json(students);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ✅ Delete Student
+router.delete('/students/:id', async (req, res) => {
+  try {
+    const student = await Student.findById(req.params.id);
+    if (!student) return res.status(404).json({ message: 'Student not found' });
+
+    // Delete user too
+    await User.findByIdAndDelete(student.userId);
+    await Student.findByIdAndDelete(req.params.id);
+
+    res.json({ message: 'Student removed' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ✅ Get All Teachers
+router.get('/teachers', async (req, res) => {
+  try {
+    const teachers = await Teacher.find();
+    res.json(teachers);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ✅ Delete Teacher
+router.delete('/teachers/:id', async (req, res) => {
+  try {
+    const teacher = await Teacher.findById(req.params.id);
+    if (!teacher) return res.status(404).json({ message: 'Teacher not found' });
+
+    await User.findByIdAndDelete(teacher.userId);
+    await Teacher.findByIdAndDelete(req.params.id);
+
+    res.json({ message: 'Teacher removed' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// ✅ Get All Subjects
+router.get('/subjects', async (req, res) => {
+  try {
+    const subjects = await Subject.find();
+    res.json(subjects);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 
 
 module.exports = router;

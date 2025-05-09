@@ -1,40 +1,18 @@
-import { useEffect, useState, useContext } from "react";
-import axios from "axios";
-import { AuthContext } from "../../Context/AuthContext";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function ManageStudents() {
-  const [students, setStudents] = useState([]);
-  const { token } = useContext(AuthContext);
-
-  useEffect(() => {
-    const fetchStudents = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/api/students", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
-        setStudents(res.data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    fetchStudents();
-  }, [token]);
+export default function ManageStudents() {
+  const navigate = useNavigate();
 
   return (
-    <div>
-      <h3>Manage Students</h3>
-      {students.length === 0 ? (
-        <p>No students found.</p>
-      ) : (
-        <ul>
-          {students.map((s) => (
-            <li key={s._id}>{s.name}</li>
-          ))}
-        </ul>
-      )}
+    <div style={{ padding: '20px' }}>
+      <h2>Manage Students</h2>
+      <button onClick={() => navigate('/add-student')} style={{ marginRight: '10px' }}>
+        Add Student
+      </button>
+      <button onClick={() => navigate('/student-list')}>
+        Student List
+      </button>
     </div>
   );
 }
-
-export default ManageStudents;

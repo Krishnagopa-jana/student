@@ -1,13 +1,14 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../Context/AuthContext";
+import '../css/StudentDashboard.css';
+import { useNavigate } from "react-router-dom"; // ✅ ADD THIS
+// import StudentSubject from "./StudentSubject"; ❌ Not needed here anymore
 
-function StudentDashboard() {
+function StudentInfo() {
   const [data, setData] = useState(null);
-  const [showSubjects, setShowSubjects] = useState(false);
-  const [marks, setMarks] = useState([]);
-  const [selectedSubject, setSelectedSubject] = useState(null);
   const { token } = useContext(AuthContext);
+  const navigate = useNavigate(); // ✅ ADD THIS
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,83 +21,27 @@ function StudentDashboard() {
     fetchData();
   }, [token]);
 
-  const handleResultClick = () => {
-    setShowSubjects(true);
-    setMarks([]);
-    setSelectedSubject(null);
-  };
-
-  const fetchMarks = async (subjectName) => {
-    setSelectedSubject(subjectName);
-    const res = await axios.get(`http://localhost:5000/api/student/my-marks/${subjectName}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    setMarks(res.data);
-  };
-
   return (
-    <div>
-      <h2>Student Dashboard</h2>
-
-      {/* Show student info */}
+    <div className="dashboard-container">
       {data ? (
-        <div>
-          <p>Name: {data.name}</p>
-          <p>Reg No: {data.registrationNo}</p>
-          <p>Department: {data.department}</p>
-          <p>Batch: {data.batch}</p>
-          <p>GPA: {data.gpa}</p>
-        </div>
+        <>
+          <p className="dashboard-container">Name: {data.name}</p>
+          <p className="student-info">Reg No: {data.registrationNo}</p>
+          <p className="student-info">Department: {data.department}</p>
+          <p className="student-info">Batch: {data.batch}</p>
+          <p className="student-info">GPA: {data.gpa}</p>
+        </>
       ) : (
-        "Loading..."
+        <p className="loading-text">Loading...</p>
       )}
 
       <hr />
 
-      {/* Result and Exams buttons */}
-      <button onClick={handleResultClick}>Result</button>
-      <button>Exams</button>
-
-      {/* Subjects list */}
-      {showSubjects && data && data.subjectname && (
-        <div>
-          <h3>Your Subjects</h3>
-          {data.subjectname.map((subj, index) => (
-            <button key={index} onClick={() => fetchMarks(subj)} style={{ margin: "5px" }}>
-              {subj}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Marks Table */}
-      {selectedSubject && (
-        <div>
-          <h3>Marks for {selectedSubject}</h3>
-          {marks.length === 0 ? (
-            <p>No marks found.</p>
-          ) : (
-            <table border="1">
-              <thead>
-                <tr>
-                  <th>Marks Obtained</th>
-                  <th>Total Marks</th>
-                </tr>
-              </thead>
-              <tbody>
-                {marks.map((m) => (
-                  <tr key={m._id}>
-                    <td>{m.marksObtained}</td>
-                    <td>{m.totalMarks}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </div>
-      )}
+      {/* ✅ Navigate on button click */}
+      <button onClick={() => navigate('/studentsubject')} className="action-btn">Result</button>
+      <button className="action-btn">Exams</button>
     </div>
   );
 }
 
-export default StudentDashboard;
+export default StudentInfo;

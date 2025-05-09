@@ -1,17 +1,15 @@
-import ManageStudents from "../Components/adminwork/ManageStudents";
-import ManageTeachers from "../Components/adminwork/ManageTeachers";
-import ManageSubjects from "../Components/adminwork/ManageSubjects";
-import ManageMarks from "../Components/adminwork/ManageMarks";
+import { useNavigate } from 'react-router-dom';
 
 function AdminDashboard() {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <Navbar />
-      <h2>Admin Dashboard</h2>
-      <ManageStudents />
-      <ManageTeachers />
-      <ManageSubjects />
-      <ManageMarks />
+      <h1>Admin Dashboard</h1>
+      <button onClick={() => navigate('/manage-students')}>Manage Students</button>
+      <button onClick={() => navigate('/manage-teachers')}>Manage Teachers</button>
+      <button onClick={() => navigate('/manage-subjects')}>Manage Subjects</button>
+      
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
+import '../css/Login.css'; // Assuming you added the CSS in a separate file
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -33,11 +34,25 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
+    <div className="login-container">
+      <div className="login-box">
+        <h2>Login</h2>
+        <input 
+          type="text" 
+          placeholder="Email" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          className="input-field"
+        />
+        <input 
+          type="password" 
+          placeholder="Password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          className="input-field"
+        />
+        <button onClick={handleLogin} className="login-btn">Login</button>
+      </div>
     </div>
   );
 }

@@ -12,9 +12,8 @@ function Navbar() {
   };
 
   return (
-    <nav style={{ background: "#eee", padding: "10px" }}>
-      <span>Role: {role} | </span>
-      <button onClick={handleLogout}>Logout</button>
+    <nav >
+     
     </nav>
   );
 }

@@ -1,11 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login";
-import Dashboard from "./Pages/Dashboard";
 import StudentDashboard from "./Pages/StudentDashboard";
 import TeacherDashboard from "./Pages/TeacherDashboard";
 import AdminDashboard from "./Pages/AdminDashboard";
 import { AuthProvider } from "./Context/AuthContext";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import ManageStudents from './Components/adminwork/ManageStudents';
+import ManageTeachers from './Components/adminwork/ManageTeachers';
+import ManageSubjects from './Components/adminwork/ManageSubjects';
+import StudentSubject from "./Pages/StudentSubject";
+import StudentSubjectMarks from "./Pages/StudentSubjectMarks";
+import TeacherSubject from "./Pages/TeacherSubject";
+import EnterMarks from "./Pages/TeacheRSubjectMarks";
+import AddStudent from "./Components/adminwork/addstudent";
+import StudentList from "./Components/adminwork/studentlist";
+import AddTeacher from "./Components/adminwork/addteacher";
+import TeacherList from "./Components/adminwork/teacherslist";
+import AddSubject from "./Components/adminwork/addsubject";
+import SubjectList from "./Components/adminwork/subjectlist";
 
 function App() {
   return (
@@ -24,6 +36,16 @@ function App() {
           />
 
           <Route
+            path="/studentsubject"
+            element={<StudentSubject />}
+          />
+
+          <Route
+            path="/studentsubjectmarks/:subjectName"
+            element={<StudentSubjectMarks />}
+          />
+
+          <Route
             path="/teacher"
             element={
               <ProtectedRoute allowedRoles={["teacher"]}>
@@ -31,6 +53,23 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+        <Route
+      path="/enter-marks/:subjectName"
+      element={
+        
+          <EnterMarks />
+        
+      }
+    />
+    <Route
+      path="/teacher-subjects"
+      element={
+        
+          <TeacherSubject />
+        
+      }
+    />
 
           <Route
             path="/admin"
@@ -40,6 +79,37 @@ function App() {
               </ProtectedRoute>
             }
           />
+
+          <Route
+            path="/manage-students"
+            element={<ManageStudents />}
+          />
+
+           <Route path="/add-student" element={<AddStudent />} />
+        
+        {/* Route for the Student List page */}
+        <Route path="/student-list" element={<StudentList />} />
+
+          <Route
+            path="/manage-teachers"
+            element={<ManageTeachers />}
+          />
+           <Route path="/add-teacher" element={<AddTeacher />} />
+        
+        {/* Route for the Teacher List page */}
+        <Route path="/teacher-list" element={<TeacherList />} />
+
+          <Route
+            path="/manage-subjects"
+            element={<ManageSubjects />}
+          />
+
+          
+           <Route path="/add-subject" element={<AddSubject />} />
+        
+        {/* Route for the Student List page */}
+        <Route path="/subject-list" element={<SubjectList />} />
+
         </Routes>
       </BrowserRouter>
     </AuthProvider>
