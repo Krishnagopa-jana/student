@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "681762459270ab7dfab5b6bb"
+  },
+  "studentId": {
+    "$oid": "68173492bcc07d7aeafd2193"
+  },
+  "subjectName": "Physics",
+  "marksObtained": 85,
+  "totalMarks": 100,
+  "teacherId": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681762459270ab7dfab5b6be"
+  },
+  "studentId": {
+    "$oid": "681735814fa41f156d40f691"
+  },
+  "subjectName": "Physics",
+  "marksObtained": 20,
+  "totalMarks": 100,
+  "teacherId": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681901586f40ed82ce16f4c4"
+  },
+  "studentId": {
+    "$oid": "68173492bcc07d7aeafd2193"
+  },
+  "subjectName": "Physics",
+  "marksObtained": 20,
+  "totalMarks": 100,
+  "teacherId": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681901596f40ed82ce16f4c7"
+  },
+  "studentId": {
+    "$oid": "681735814fa41f156d40f691"
+  },
+  "subjectName": "Physics",
+  "marksObtained": 40,
+  "totalMarks": 100,
+  "teacherId": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c5d0850d628d0c699374b"
+  },
+  "studentId": {
+    "$oid": "68173492bcc07d7aeafd2193"
+  },
+  "subjectName": "Physics",
+  "marksObtained": 56,
+  "totalMarks": 1000,
+  "teacherId": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c5d0850d628d0c699374e"
+  },
+  "studentId": {
+    "$oid": "681735814fa41f156d40f691"
+  },
+  "subjectName": "Physics",
+  "marksObtained": 23,
+  "totalMarks": 60,
+  "teacherId": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "__v": 0
+}]

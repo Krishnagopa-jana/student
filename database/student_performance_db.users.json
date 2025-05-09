@@ -1,0 +1,315 @@
+[{
+  "_id": {
+    "$oid": "68107a17febbf45d0169f141"
+  },
+  "email": "admin@example.com",
+  "password": "$2b$10$IGUn1pB3/diQUc0qHjrCROe.u036933KLnd.c5o4Q5a/vgeIB.2Py",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815e70a442f81102f90749b"
+  },
+  "email": "student@example.com",
+  "password": "$2b$10$vMkwylm3vAlcl3HBKRXcyu7.kL.efsotIrS1Aqs0gbhxvkMTFWN7i",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68163a40a7feb39c61157545"
+  },
+  "email": "abeera@nu.edu.pk",
+  "password": "$2b$10$ApRW4g2NrMJfN3inoFJxxeryO7w7ACXor7GKu/fE7Ph6AUusOGHk.",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6816423f5df9e9fdc22cbd7d"
+  },
+  "email": "abeera3@nu.edu.pk",
+  "password": "$2b$10$ndY/mPGIH60u3i.0Jv7j.uNd01RAFxvYTtGu/11e9jChpcOooEm8W",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681642f8e1840fa117f213da"
+  },
+  "email": "abeerafati@nu.edu.pk",
+  "password": "$2b$10$nRerV2TicwEEqKvlAgYiaem0apvRhQc7f01nldgv7TF4VDF2VR2Vu",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68164316e1840fa117f213e0"
+  },
+  "email": "farhan@nu.edu.pk",
+  "password": "$2b$10$Ub7s2Y3ZVblPrBS61loD1ukki3Tc/4unxp3FSSOTQaEANe8pg0xg6",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681644bf68e39bef45e2562d"
+  },
+  "email": "farhanahmad@nt.edu.pk",
+  "password": "$2b$10$KdCNsl.2/A8tPGCsSq.2A.oqzFoMHK2oe9BoA5BXQZCmhizczjHna",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6816460398cd569f4a8692a4"
+  },
+  "email": "atika@nt.edu.pk",
+  "password": "$2b$10$9hTmqz3vhLxGC9m7WkJtLuMsinxmyErOzb7moBFl.cqJE/rNiNYZO",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68165bfb5c4d3d2a7b3a7a52"
+  },
+  "email": "johndoe@example.com",
+  "password": "$2b$10$H4pEVzLuIMYwtvWfDIDM0Oo.pf0xopAKDSpJKgGzn./qmZ5V5g1ny",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68165e38c180f5b4cf94d09f"
+  },
+  "email": "jnde@example.com",
+  "password": "$2b$10$zJbRiwxT6oShb7.fIqre6.g.dUhZ0RaL1hFq2bY0QjLgQ0W7VqLHK",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68165e51c180f5b4cf94d0a3"
+  },
+  "email": "fbnde@example.com",
+  "password": "$2b$10$B.B9xMxRjkE5pAyxIduRqOqmodBZmOjEZfYV5ANXAsFvj1SU07rw2",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68165e68c180f5b4cf94d0a7"
+  },
+  "email": "fbnde@mple.com",
+  "password": "$2b$10$Z7vNKC/oCHOaOtJjTZ3MbeSeB02OnBrrrchXrY77En6EO/OOk69eW",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68165e9dc180f5b4cf94d0ab"
+  },
+  "email": "hadinde@mple.com",
+  "password": "$2b$10$5gsgOiJyV3y3mEc3LVJVxOAAOtLKz/SQMELcxJwpIkid/ZZLAakJ2",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68165f829389a0a6a8df56ed"
+  },
+  "email": "ayeshakhan@example.com",
+  "password": "$2b$10$v7lnwWTHF6IkDIPTwb.4SOlZKZLPAyo5lodTwWf176OmPrGOFFgdK",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68166012209d7ea7d267e0d3"
+  },
+  "email": "saramalik@example.com",
+  "password": "$2b$10$0f/Ux17N886.DfosGyksne1hAeGtYjtysX4Zr2fr8AREuw4CpBGuC",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6817180a42399d2f8fdf4ad4"
+  },
+  "email": "jane.smith@example.com",
+  "password": "$2b$10$6aY7HfF.A5N.Dw8sg8/QYOrbuI2kK369qHirxjV9dbqyeeetBwqne",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68173266f17e26711d60007b"
+  },
+  "email": "alikhan@student.com",
+  "password": "$2b$10$yDFmt8.Rm9FarC33qoBQruVggNKsoeSt5jJbrmwj1HakQzYGIpLMu",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68173339be752e30ca77994e"
+  },
+  "email": "alin@student.com",
+  "password": "$2b$10$HlzYXRTLawCzESJDPILnyuG1h..gjbHfDRQwT1CXQ7ErzXj4hw7Sm",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681733b4be752e30ca779952"
+  },
+  "email": "alcvmfin@student.com",
+  "password": "$2b$10$labmOXSI0J74EoIscvJnl.E75dnOzBmzBepkUeeEFNnp214B5Jj/y",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68173492bcc07d7aeafd2190"
+  },
+  "email": "alcvmfin@studenggt.com",
+  "password": "$2b$10$hly.VkwQyOFhltSOKN/3D.KHof6NcUHfgtpROoAxsUi/x5n5opkr2",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6817355f4fa41f156d40f685"
+  },
+  "email": "alcvmfingd@studenggt.com",
+  "password": "126787",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681735814fa41f156d40f68e"
+  },
+  "email": "alcvmfingd@studenffggt.com",
+  "password": "126787",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68173d7ba788320ef98cac91"
+  },
+  "email": "amit.sharma@example.com",
+  "password": "1608",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68173ebc41922b4b6f56b1c8"
+  },
+  "email": "amit.skffharma@exampccle.com",
+  "password": "1608",
+  "role": "teacher",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68177688c7319322c44efc0c"
+  },
+  "email": "ABEEESHA@exaDSJle.com",
+  "password": "2005",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68177db656adbf6ba3c6be0e"
+  },
+  "email": "ABEEESHA@exaDSJgffle.com",
+  "password": "20056",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68177df518e0f9bfeca01482"
+  },
+  "email": "ABEEEddSHA@exaDSJgsdffle.com",
+  "password": "200556",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c53917d27a00fe539c43e"
+  },
+  "email": "hunain@",
+  "password": "16082005",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c55877d27a00fe539c449"
+  },
+  "email": "ibtasam@",
+  "password": "1234567",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c55c37d27a00fe539c44e"
+  },
+  "email": "ibtam@",
+  "password": "123456778",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c571f7d27a00fe539c455"
+  },
+  "email": "huda@",
+  "password": "7438920",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c58a9eca374170cb2b45e"
+  },
+  "email": "wasif@",
+  "password": "5367289",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c59f7c7be00e9b0f0ee4c"
+  },
+  "email": "hamza@",
+  "password": "1423",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c5b7750d628d0c699371a"
+  },
+  "email": "4@",
+  "password": "567",
+  "role": "student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c5c1350d628d0c6993724"
+  },
+  "email": "uswa@",
+  "password": "1234",
+  "role": "student",
+  "__v": 0
+}]

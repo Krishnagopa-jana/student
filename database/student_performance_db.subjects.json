@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "6817124d3b9a00928ffad8e5"
+  },
+  "name": "English",
+  "code": "CS202",
+  "department": "CS-2021",
+  "teacherId": {
+    "$oid": "68166012209d7ea7d267e0d5"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681718e442399d2f8fdf4ad8"
+  },
+  "name": "Physics",
+  "code": "CHEM101",
+  "department": "Science",
+  "teacherId": {
+    "$oid": "6817180a42399d2f8fdf4ad6"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681722e6b0cd10176b9c243d"
+  },
+  "name": "Chemistry",
+  "code": "CHEM01",
+  "department": "Science",
+  "teacheremail": "jane.smith@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681742f0cc91fd3b7184e478"
+  },
+  "name": "Physics",
+  "code": "PHY101",
+  "department": "Science",
+  "teacheremail": "amit.skffharma@exampccle.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68174305cc91fd3b7184e47e"
+  },
+  "name": "Chemistry",
+  "code": "CH101",
+  "department": "Science",
+  "teacheremail": "amit.skffharma@exampccle.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c8c2d6f41aa9592964c38"
+  },
+  "name": "English",
+  "code": "56738",
+  "department": "ha",
+  "teacheremail": "saramalik@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681c8c716f41aa9592964c3c"
+  },
+  "name": "Physics",
+  "code": "PHY",
+  "department": "science",
+  "teacheremail": "saramalik@example.com",
+  "__v": 0
+}]
