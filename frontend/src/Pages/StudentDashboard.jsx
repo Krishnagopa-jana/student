@@ -1,14 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../Context/AuthContext";
-import '../css/StudentDashboard.css';
-import { useNavigate } from "react-router-dom"; // ✅ ADD THIS
-// import StudentSubject from "./StudentSubject"; ❌ Not needed here anymore
+import { useNavigate } from "react-router-dom";
 
 function StudentInfo() {
   const [data, setData] = useState(null);
   const { token } = useContext(AuthContext);
-  const navigate = useNavigate(); // ✅ ADD THIS
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,24 +20,23 @@ function StudentInfo() {
   }, [token]);
 
   return (
-    <div className="dashboard-container">
+    <div>
       {data ? (
         <>
-          <p className="dashboard-container">Name: {data.name}</p>
-          <p className="student-info">Reg No: {data.registrationNo}</p>
-          <p className="student-info">Department: {data.department}</p>
-          <p className="student-info">Batch: {data.batch}</p>
-          <p className="student-info">GPA: {data.gpa}</p>
+          <p>Name: {data.name}</p>
+          <p>Reg No: {data.registrationNo}</p>
+          <p>Department: {data.department}</p>
+          <p>Batch: {data.batch}</p>
+          <p>GPA: {data.gpa}</p>
         </>
       ) : (
-        <p className="loading-text">Loading...</p>
+        <p>Loading...</p>
       )}
 
       <hr />
 
-      {/* ✅ Navigate on button click */}
-      <button onClick={() => navigate('/studentsubject')} className="action-btn">Result</button>
-      <button className="action-btn">Exams</button>
+      <button onClick={() => navigate('/studentsubject')}>Result</button>
+      <button>Exams</button>
     </div>
   );
 }

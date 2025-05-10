@@ -11,55 +11,50 @@ const jwt = require('jsonwebtoken');
 // Register
 router.post("/register", async (req, res) => {
   try {
-    const { name, email, password, role, registrationNo, department, batch, gpa,subjectname } = req.body;
+    const users = Array.isArray(req.body) ? req.body : [req.body]; // always treat as an array
 
-    //const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ name, email, password, role });
+    for (const userData of users) {
+      const { name, email, password, role, registrationNo, department, batch, gpa, subjectname } = userData;
 
-    await newUser.save();
-     
-   
+      const newUser = new User({ name, email, password, role });
+      await newUser.save();
 
-    // If student → create student record
-     if (role === "student") {
-      // Ensure subjectname is an array
-      const finalSubjects = Array.isArray(subjectname) ? subjectname : [];
+      if (role === "student") {
+        const finalSubjects = Array.isArray(subjectname) ? subjectname : [];
 
-      const newStudent = new Student({
-        userId: newUser._id,
-        name,
-        registrationNo,
-        department,
-        batch,
-        email,
-        gpa,
-        subjectname: finalSubjects
-      });
-      await newStudent.save();
+        const newStudent = new Student({
+          userId: newUser._id,
+          name,
+          registrationNo,
+          department,
+          batch,
+          email,
+          gpa,
+          subjectname: finalSubjects
+        });
+        await newStudent.save();
+      }
+
+      if (role === "teacher") {
+        const newTeacher = new Teacher({
+          userId: newUser._id,
+          name,
+          email
+        });
+        await newTeacher.save();
+      }
+
+      if (role === "admin") {
+        const newAdmin = new Admin({
+          userId: newUser._id,
+          name,
+          email
+        });
+        await newAdmin.save();
+      }
     }
 
-    // If teacher → create teacher record
-    if (role === "teacher") {
-      const newTeacher = new Teacher({
-        userId: newUser._id,
-        name,
-        email
-        // add more fields if needed
-      });
-      await newTeacher.save();
-    }
-
-     if (role === "admin") {
-      const newAdmin = new Admin({
-        userId: newUser._id,
-        name,
-        email
-        // add more fields if needed
-      });
-      await newAdmin.save();
-    }
-
-    res.status(201).json({ message: "User registered successfully", user: newUser });
+    res.status(201).json({ message: "User(s) registered successfully" });
 
   } catch (err) {
     res.status(500).json({ error: err.message });

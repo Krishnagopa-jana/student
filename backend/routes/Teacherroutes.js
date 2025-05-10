@@ -50,14 +50,15 @@ router.get('/students-for-subject/:subjectName', verifyToken, allowRoles('teache
 // Add marks for a student
 router.post('/add-marks', verifyToken, allowRoles('teacher'), async (req, res) => {
   try {
-    const { studentId, subjectName, marksObtained, totalMarks } = req.body;
+    const { studentId, subjectName, marksObtained, totalMarks , assessmentType } = req.body;
 
     const newMarks = new Marks({
       studentId,
       subjectName,
       marksObtained,
       totalMarks,
-      teacherId: req.user.id
+      teacherId: req.user.id,
+      assessmentType // added here
     });
 
     await newMarks.save();

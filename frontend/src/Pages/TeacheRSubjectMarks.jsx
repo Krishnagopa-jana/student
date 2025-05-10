@@ -1,16 +1,16 @@
-// Pages/EnterMarks.jsx
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 
-
 function EnterMarks() {
   const { token } = useContext(AuthContext);
   const { subjectName } = useParams();
   const [students, setStudents] = useState([]);
   const [marks, setMarks] = useState({});
+  const [assessmentType, setAssessmentType] = useState("");
+  const [totalMarks, setTotalMarks] = useState("");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -27,33 +27,36 @@ function EnterMarks() {
         console.error(err);
       }
     };
-
     fetchStudents();
   }, [token, subjectName]);
 
-  const handleMarkChange = (studentId, field, value) => {
+  const handleMarkChange = (studentId, value) => {
     setMarks((prev) => ({
       ...prev,
-      [studentId]: {
-        ...prev[studentId],
-        [field]: value,
-      },
+      [studentId]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!assessmentType || !totalMarks) {
+      setMessage("Please fill out Assessment Type and Total Marks.");
+      return;
+    }
+
     try {
       for (const student of students) {
-        const studentMarks = marks[student._id];
-        if (studentMarks) {
+        const obtainedMarks = marks[student._id];
+        if (obtainedMarks !== undefined) {
           await axios.post(
             "http://localhost:5000/api/teacher/add-marks",
             {
               studentId: student._id,
               subjectName,
-              marksObtained: studentMarks.marksObtained,
-              totalMarks: studentMarks.totalMarks,
+              marksObtained: obtainedMarks,
+              totalMarks,
+              assessmentType,
             },
             {
               headers: { Authorization: `Bearer ${token}` },
@@ -69,44 +72,108 @@ function EnterMarks() {
   };
 
   return (
-    <div style={{ maxWidth: "800px", margin: "auto", padding: "20px" }}>
-    
+    <div style={{ maxWidth: "1000px", margin: "auto", padding: "30px" }}>
+      <Navbar />
       <h2>Enter Marks for {subjectName}</h2>
+
       {students.length === 0 ? (
         <p>No students enrolled.</p>
       ) : (
         <form onSubmit={handleSubmit}>
-          {students.map((student) => (
-            <div key={student._id} style={{ marginBottom: "10px" }}>
-              <p>
-                <strong>{student.name}</strong> ({student.registrationNo})
-              </p>
-              <input
-                type="number"
-                placeholder="Marks Obtained"
-                value={marks[student._id]?.marksObtained || ""}
-                onChange={(e) =>
-                  handleMarkChange(student._id, "marksObtained", e.target.value)
-                }
-                required
-              />
-              <input
-                type="number"
-                placeholder="Total Marks"
-                value={marks[student._id]?.totalMarks || ""}
-                onChange={(e) =>
-                  handleMarkChange(student._id, "totalMarks", e.target.value)
-                }
-                required
-              />
-            </div>
-          ))}
-          <button type="submit">Submit Marks</button>
+          <div style={{ marginBottom: "20px" }}>
+            <input
+              type="text"
+              placeholder="Assessment Type (e.g. Quiz 1)"
+              value={assessmentType}
+              onChange={(e) => setAssessmentType(e.target.value)}
+              required
+              style={{
+                padding: "8px",
+                marginRight: "10px",
+                width: "250px",
+                fontSize: "14px",
+              }}
+            />
+            <input
+              type="number"
+              placeholder="Total Marks"
+              value={totalMarks}
+              onChange={(e) => setTotalMarks(e.target.value)}
+              required
+              style={{
+                padding: "8px",
+                width: "150px",
+                fontSize: "14px",
+              }}
+            />
+          </div>
+
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr style={{ backgroundColor: "#f2f2f2" }}>
+                <th style={thStyle}>Name</th>
+                <th style={thStyle}>Registration Number</th>
+                <th style={thStyle}>Marks Obtained</th>
+              </tr>
+            </thead>
+            <tbody>
+              {students.map((student) => (
+                <tr key={student._id}>
+                  <td style={tdStyle}>{student.name}</td>
+                  <td style={tdStyle}>{student.registrationNo}</td>
+                  <td style={tdStyle}>
+                    <input
+                      type="number"
+                      value={marks[student._id] || ""}
+                      onChange={(e) =>
+                        handleMarkChange(student._id, e.target.value)
+                      }
+                      required
+                      style={{
+                        padding: "6px",
+                        width: "100px",
+                        fontSize: "14px",
+                      }}
+                    />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <button
+            type="submit"
+            style={{
+              marginTop: "20px",
+              padding: "10px 20px",
+              backgroundColor: "#4CAF50",
+              color: "#fff",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Submit Marks
+          </button>
         </form>
       )}
-      {message && <p>{message}</p>}
+      {message && (
+        <p style={{ marginTop: "15px", fontWeight: "bold" }}>{message}</p>
+      )}
     </div>
   );
 }
+
+const thStyle = {
+  padding: "12px",
+  textAlign: "left",
+  borderBottom: "1px solid #ddd",
+};
+
+const tdStyle = {
+  padding: "10px",
+  borderBottom: "1px solid #ddd",
+};
 
 export default EnterMarks;

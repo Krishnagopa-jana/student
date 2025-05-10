@@ -46,4 +46,41 @@ router.get('/my-marks/:subjectName', verifyToken, allowRoles('student'), async (
   }
 });
 
+
+// GET average marks for a subject and assessment type
+router.get("/subject-average/:subjectName/:assessmentType", async (req, res) => {
+  try {
+    const { subjectName, assessmentType } = req.params;
+
+    const result = await Marks.aggregate([
+      {
+        $match: {
+          subjectName,
+          assessmentType
+        }
+      },
+      {
+        $group: {
+          _id: null,
+          averageMarks: { $avg: "$marksObtained" },
+          totalStudents: { $sum: 1 } // counts how many marks records exist (i.e. how many students)
+        }
+      }
+    ]);
+
+    if (result.length === 0) {
+      return res.status(404).json({ message: "No marks found for this subject and assessment type." });
+    }
+
+    res.json(result[0]);
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error calculating average" });
+  }
+});
+
+
+
+
 module.exports = router;
