@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../Context/AuthContext";
-import '../css/StudentDashboard.css';
+
 
 function SubjectMarks() {
   const { subjectName } = useParams();

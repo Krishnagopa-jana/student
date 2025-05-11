@@ -8,7 +8,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import ManageStudents from './Components/adminwork/ManageStudents';
 import ManageTeachers from './Components/adminwork/ManageTeachers';
 import ManageSubjects from './Components/adminwork/ManageSubjects';
-import StudentSubject from "./Pages/StudentSubject";
+
 import StudentSubjectMarks from "./Pages/StudentSubjectMarks";
 import TeacherSubject from "./Pages/TeacherSubject";
 import EnterMarks from "./Pages/TeacheRSubjectMarks";
@@ -35,10 +35,6 @@ function App() {
             }
           />
 
-          <Route
-            path="/studentsubject"
-            element={<StudentSubject />}
-          />
 
           <Route
             path="/studentsubjectmarks/:subjectName"
