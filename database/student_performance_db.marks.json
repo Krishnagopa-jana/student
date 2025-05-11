@@ -1,0 +1,816 @@
+[{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c57b"
+  },
+  "studentId": {
+    "$oid": "681e1bdab155ac0207e0a534"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c57e"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd07221f2"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c581"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072220a"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c584"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072220e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c587"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd0722212"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 7,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c58a"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072221e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 7,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c58d"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd0722232"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 7,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c590"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd072223e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 8,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c593"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd072224e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c596"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd072225c"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 10,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c599"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd0722268"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c59c"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd0722274"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c59f"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd0722280"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c5a2"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd0722290"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c5a5"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222a0"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 10,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c5a8"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222b0"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f85adc8072e6f6f25c5ab"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222c0"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 1",
+  "marksObtained": 4,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c710f"
+  },
+  "studentId": {
+    "$oid": "681e1bdab155ac0207e0a534"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7112"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd07221f2"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 7,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7115"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072220a"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 8,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7118"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072220e"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c711b"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd0722212"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c711e"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072221e"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 10,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7121"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd0722232"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 2,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7124"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd072223e"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7127"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd072224e"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 7,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c712a"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd072225c"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 8,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c712d"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd0722268"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7130"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd0722274"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7133"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd0722280"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7136"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd0722290"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c7139"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222a0"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 7,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c713c"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222b0"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 8,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8cdff3d4a5bcff7c713f"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222c0"
+  },
+  "subjectName": "Algorithms",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 9,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209c9907a2cdd0722352"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c7182"
+  },
+  "studentId": {
+    "$oid": "681e1bdab155ac0207e0a534"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 3,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c7185"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd07221f2"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c7188"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072220a"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c718b"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072220e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c718e"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd0722212"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c7191"
+  },
+  "studentId": {
+    "$oid": "681e1e529907a2cdd072221e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c7194"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd0722232"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 8,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c7197"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd072223e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 4,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c719a"
+  },
+  "studentId": {
+    "$oid": "681e1f419907a2cdd072224e"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c719d"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd072225c"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 4,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71a0"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd0722268"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71a3"
+  },
+  "studentId": {
+    "$oid": "681e1f6f9907a2cdd0722274"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 2,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71a6"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd0722280"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 5,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71a9"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd0722290"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71ac"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222a0"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71af"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222b0"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8d72f3d4a5bcff7c71b2"
+  },
+  "studentId": {
+    "$oid": "681e1f899907a2cdd07222c0"
+  },
+  "subjectName": "Data Structures",
+  "assessmentType": "Quiz 2",
+  "marksObtained": 6,
+  "totalMarks": 10,
+  "teacherId": {
+    "$oid": "681e209b9907a2cdd0722342"
+  },
+  "__v": 0
+}]

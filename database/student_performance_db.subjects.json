@@ -1,0 +1,420 @@
+[{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f74"
+  },
+  "name": "Physics",
+  "code": "PHY101",
+  "department": "SMME",
+  "teacheremail": "muhammad.hassan@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f78"
+  },
+  "name": "Artificial Intelligence",
+  "code": "AI102",
+  "department": "SCME",
+  "teacheremail": "ayesha.malik@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f7c"
+  },
+  "name": "Algorithms",
+  "code": "CS103",
+  "department": "SNS",
+  "teacheremail": "omer.akhtar@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f80"
+  },
+  "name": "Chemistry",
+  "code": "CHE104",
+  "department": "SCME",
+  "teacheremail": "kiran.zahid@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f84"
+  },
+  "name": "Linear Algebra",
+  "code": "MATH105",
+  "department": "SNS",
+  "teacheremail": "wasiq.javed@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f88"
+  },
+  "name": "Machine Learning",
+  "code": "ML106",
+  "department": "SCME",
+  "teacheremail": "zubair.arshad@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f8c"
+  },
+  "name": "Operating Systems",
+  "code": "OS107",
+  "department": "SEECS",
+  "teacheremail": "ruqaiya.tariq@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f90"
+  },
+  "name": "Databases",
+  "code": "DB108",
+  "department": "SNS",
+  "teacheremail": "ali.shahid@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f94"
+  },
+  "name": "Software Engineering",
+  "code": "SE109",
+  "department": "SEECS",
+  "teacheremail": "marium.khan@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f98"
+  },
+  "name": "Data Structures",
+  "code": "CS110",
+  "department": "SNS",
+  "teacheremail": "junaid.rafique@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6f9c"
+  },
+  "name": "Computer Networks",
+  "code": "CN111",
+  "department": "SEECS",
+  "teacheremail": "sara.bilal@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fa0"
+  },
+  "name": "Physics",
+  "code": "PHY112",
+  "department": "SMME",
+  "teacheremail": "tariq.anwar@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fa4"
+  },
+  "name": "Artificial Intelligence",
+  "code": "AI113",
+  "department": "SCME",
+  "teacheremail": "fatima.rehman@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fa8"
+  },
+  "name": "Algorithms",
+  "code": "CS114",
+  "department": "SNS",
+  "teacheremail": "zainab.riaz@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fac"
+  },
+  "name": "Chemistry",
+  "code": "CHE115",
+  "department": "SCME",
+  "teacheremail": "raza.ali@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fb0"
+  },
+  "name": "Linear Algebra",
+  "code": "MATH116",
+  "department": "SNS",
+  "teacheremail": "adeel.malik@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fb4"
+  },
+  "name": "Machine Learning",
+  "code": "ML117",
+  "department": "SCME",
+  "teacheremail": "mehreen.shahid@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fb8"
+  },
+  "name": "Operating Systems",
+  "code": "OS118",
+  "department": "SEECS",
+  "teacheremail": "kashif.iqbal@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fbc"
+  },
+  "name": "Databases",
+  "code": "DB119",
+  "department": "SNS",
+  "teacheremail": "shazia.khan@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fc0"
+  },
+  "name": "Software Engineering",
+  "code": "SE120",
+  "department": "SEECS",
+  "teacheremail": "aftab.noor@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fc4"
+  },
+  "name": "Data Structures",
+  "code": "CS121",
+  "department": "SNS",
+  "teacheremail": "muhammad.hassan@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e254ff81717b4981f6fc8"
+  },
+  "name": "Computer Networks",
+  "code": "CN122",
+  "department": "SEECS",
+  "teacheremail": "ayesha.malik@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4c5"
+  },
+  "name": "Algorithms",
+  "code": "CS123",
+  "department": "SEECS",
+  "teacheremail": "aftab.noor@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4c9"
+  },
+  "name": "Machine Learning",
+  "code": "ML124",
+  "department": "SCME",
+  "teacheremail": "kashif.iqbal@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4cd"
+  },
+  "name": "Chemistry",
+  "code": "CHE125",
+  "department": "SCME",
+  "teacheremail": "shazia.khan@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4d1"
+  },
+  "name": "Data Structures",
+  "code": "CS126",
+  "department": "SNS",
+  "teacheremail": "adeel.malik@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4d5"
+  },
+  "name": "Operating Systems",
+  "code": "OS127",
+  "department": "SEECS",
+  "teacheremail": "mehreen.shahid@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4d9"
+  },
+  "name": "Computer Networks",
+  "code": "CN128",
+  "department": "SEECS",
+  "teacheremail": "zainab.riaz@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4dd"
+  },
+  "name": "Databases",
+  "code": "DB129",
+  "department": "SNS",
+  "teacheremail": "raza.ali@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4e1"
+  },
+  "name": "Software Engineering",
+  "code": "SE130",
+  "department": "SEECS",
+  "teacheremail": "fatima.rehman@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4e5"
+  },
+  "name": "Physics",
+  "code": "PHY131",
+  "department": "SMME",
+  "teacheremail": "sara.bilal@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8049c8072e6f6f25c4e9"
+  },
+  "name": "Linear Algebra",
+  "code": "MATH132",
+  "department": "SNS",
+  "teacheremail": "tariq.anwar@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c4ed"
+  },
+  "name": "Artificial Intelligence",
+  "code": "AI133",
+  "department": "SEECS",
+  "teacheremail": "junaid.rafique@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c4f1"
+  },
+  "name": "Algorithms",
+  "code": "CS134",
+  "department": "SNS",
+  "teacheremail": "junaid.rafique@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c4f5"
+  },
+  "name": "Machine Learning",
+  "code": "ML135",
+  "department": "SCME",
+  "teacheremail": "marium.khan@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c4f9"
+  },
+  "name": "Chemistry",
+  "code": "CHE136",
+  "department": "SCME",
+  "teacheremail": "ali.shahid@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c4fd"
+  },
+  "name": "Data Structures",
+  "code": "CS137",
+  "department": "SEECS",
+  "teacheremail": "ruqaiya.tariq@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c501"
+  },
+  "name": "Operating Systems",
+  "code": "OS138",
+  "department": "SEECS",
+  "teacheremail": "zubair.arshad@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c505"
+  },
+  "name": "Computer Networks",
+  "code": "CN139",
+  "department": "SEECS",
+  "teacheremail": "sajid.ahmed@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c509"
+  },
+  "name": "Databases",
+  "code": "DB140",
+  "department": "SNS",
+  "teacheremail": "sajid.ahmed@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c50d"
+  },
+  "name": "Software Engineering",
+  "code": "SE141",
+  "department": "SEECS",
+  "teacheremail": "aftab.noor@example.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f8058c8072e6f6f25c511"
+  },
+  "name": "Physics",
+  "code": "PHY142",
+  "department": "SMME",
+  "teacheremail": "kashif.iqbal@example.com",
+  "__v": 0
+}]

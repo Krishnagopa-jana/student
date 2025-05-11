@@ -5,15 +5,21 @@ import { useNavigate } from "react-router-dom";
 
 function StudentInfo() {
   const [data, setData] = useState(null);
+  const [subjects, setSubjects] = useState([]);
   const { token } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:5000/api/student/me", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      setData(res.data);
+      try {
+        const res = await axios.get("http://localhost:5000/api/student/me", {
+          headers: { Authorization: `Bearer ${token}` }, // ✅ fixed template literal
+        });
+        setData(res.data);
+        setSubjects(res.data.subjectname);
+      } catch (err) {
+        console.error("Failed to fetch student data:", err);
+      }
     };
 
     fetchData();
@@ -30,15 +36,30 @@ function StudentInfo() {
           <p>GPA: {data.gpa}</p>
         </>
       ) : (
-        <p>Loading...</p>
+        <p>Loading student info...</p>
       )}
 
       <hr />
 
-      <button onClick={() => navigate('/studentsubject')}>Result</button>
-      <button>Exams</button>
+      <h3>Your Subjects</h3>
+      {subjects.length > 0 ? (
+        subjects.map((subj, index) => (
+          <button
+            key={index}
+            onClick={() => navigate(`/studentsubjectmarks/${subj}`)} // ✅ fixed template literal
+            className="subject-btn"
+          >
+            {subj}
+          </button>
+        ))
+      ) : (
+        <p>Loading subjects...</p>
+      )}
     </div>
   );
 }
 
 export default StudentInfo;
+
+
+
