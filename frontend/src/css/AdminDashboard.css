@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --main-bg-color: #f0f4ff;
+  --primary-color: #003366;
+  --accent-color: #4a90e2;
+  --white: #ffffff;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+.admin-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+  padding: 0;
+  width: 80vw;         /* <-- add this */
+  box-sizing: border-box;
+}
+
+.admin-header {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 2rem 0;
+}
+
+.admin-body {
+  display: flex;
+  flex: 1;
+  padding: 0 1rem;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--card-shadow);
+}
+
+.admin-info-card {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.admin-info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-info-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.admin-sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #3c7dc4;
+}
+
+/* Main Panel */
+.admin-main {
+  flex: 1;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  width: 50vw;
+}
+
+.admin-section-title {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.admin-overview {
+  background-color: var(--main-bg-color);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.admin-overview ul {
+  list-style: none;
+  padding: 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.admin-overview li {
+  margin-bottom: 0.5rem;
+}
+
+/* Button Styles */
+.manage-buttons {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #3c7dc4;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  background-color: #e0eaff;
+  color: #333;
+  margin-top: auto;
+}
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.form-group input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.back-button-fixed {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.back-button-fixed:hover {
+  background-color: #3c7dc4;
+}

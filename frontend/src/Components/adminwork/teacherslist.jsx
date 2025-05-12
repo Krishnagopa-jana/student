@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ✅ Import
 import axios from 'axios';
 
 export default function TeacherList() {
+  const navigate = useNavigate(); // ✅ Initialize navigate
   const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
@@ -30,6 +32,14 @@ export default function TeacherList() {
 
   return (
     <div style={{ padding: '20px' }}>
+      {/* ✅ Go Back Button */}
+      <button
+        className="back-button-fixed"
+        onClick={() => navigate('/manage-teachers')}
+      >
+        ← Go Back
+      </button>
+
       <h2>Teacher List</h2>
       <table border="1" cellPadding="10">
         <thead>

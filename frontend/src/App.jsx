@@ -8,7 +8,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import ManageStudents from './Components/adminwork/ManageStudents';
 import ManageTeachers from './Components/adminwork/ManageTeachers';
 import ManageSubjects from './Components/adminwork/ManageSubjects';
-
+import Visualization from "./Pages/Visualization";  // Import Visualization
 import StudentSubjectMarks from "./Pages/StudentSubjectMarks";
 import TeacherSubject from "./Pages/TeacherSubject";
 import EnterMarks from "./Pages/TeacheRSubjectMarks";
@@ -35,6 +35,15 @@ function App() {
             }
           />
 
+          {/* Adjusted route for the Visualization page */}
+          <Route
+            path="/studentdashboard/visualization"
+            element={
+              <ProtectedRoute allowedRoles={["student"]}>
+                <Visualization />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/studentsubjectmarks/:subjectName"
@@ -50,22 +59,15 @@ function App() {
             }
           />
 
-        <Route
-      path="/enter-marks/:subjectName"
-      element={
-        
-          <EnterMarks />
-        
-      }
-    />
-    <Route
-      path="/teacher-subjects"
-      element={
-        
-          <TeacherSubject />
-        
-      }
-    />
+          <Route
+            path="/enter-marks/:subjectName"
+            element={<EnterMarks />}
+          />
+
+          <Route
+            path="/teacher-subjects"
+            element={<TeacherSubject />}
+          />
 
           <Route
             path="/admin"
@@ -76,36 +78,15 @@ function App() {
             }
           />
 
-          <Route
-            path="/manage-students"
-            element={<ManageStudents />}
-          />
-
-           <Route path="/add-student" element={<AddStudent />} />
-        
-        {/* Route for the Student List page */}
-        <Route path="/student-list" element={<StudentList />} />
-
-          <Route
-            path="/manage-teachers"
-            element={<ManageTeachers />}
-          />
-           <Route path="/add-teacher" element={<AddTeacher />} />
-        
-        {/* Route for the Teacher List page */}
-        <Route path="/teacher-list" element={<TeacherList />} />
-
-          <Route
-            path="/manage-subjects"
-            element={<ManageSubjects />}
-          />
-
-          
-           <Route path="/add-subject" element={<AddSubject />} />
-        
-        {/* Route for the Student List page */}
-        <Route path="/subject-list" element={<SubjectList />} />
-
+          <Route path="/manage-students" element={<ManageStudents />} />
+          <Route path="/add-student" element={<AddStudent />} />
+          <Route path="/student-list" element={<StudentList />} />
+          <Route path="/manage-teachers" element={<ManageTeachers />} />
+          <Route path="/add-teacher" element={<AddTeacher />} />
+          <Route path="/teacher-list" element={<TeacherList />} />
+          <Route path="/manage-subjects" element={<ManageSubjects />} />
+          <Route path="/add-subject" element={<AddSubject />} />
+          <Route path="/subject-list" element={<SubjectList />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Import
 import axios from "axios";
 import { AuthContext } from "../../Context/AuthContext";
 
 function SubjectList() {
+  const navigate = useNavigate(); // ✅ Initialize navigate
   const [subjects, setSubjects] = useState([]);
   const { token } = useContext(AuthContext);
 
@@ -35,9 +37,17 @@ function SubjectList() {
 
   return (
     <div>
+      {/* ✅ Go Back Button */}
+      <button
+        className="back-button-fixed"
+        onClick={() => navigate('/manage-subjects')} // Navigate back to the Manage Subjects page
+      >
+        ← Go Back
+      </button>
+
       <h2>SUBJECT LIST</h2>
       <div>
-       <table border="1" cellPadding="10">
+        <table border="1" cellPadding="10">
           <thead>
             <tr>
               <th>Name</th>

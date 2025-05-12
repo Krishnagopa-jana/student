@@ -16,15 +16,38 @@ body {
 
 /* Main Page Container */
 .page-container {
-  background: rgba(255, 255, 255, 0.1); /* Subtle glass effect */
-  backdrop-filter: blur(15px);
-  border-radius: 15px;
-  padding: 50px;
-  max-width: 1200px;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease-in-out;
+  /* Main Container Styling - from improved admin-container */
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  color: #090909;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 30px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 20px;
+  }
+}
+
+
 
 /* Hover Effect on Container */
 .page-container:hover {
@@ -46,19 +69,21 @@ button, .btn {
   font-family: 'Poppins', sans-serif;
   padding: 12px 40px;
   font-size: 16px;
-  background: linear-gradient(45deg, #1a73e8, #64b5f6); /* Blue gradient */
+  background: linear-gradient(45deg, #d516d8, #0a7ddc); /* Blue gradient */
   color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  margin-top: auto;
+  margin: 10px 0;
 }
 
 button:hover, .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(45deg, #64b5f6, #1a73e8);
+  background: linear-gradient(45deg, #6f5edf, #731ef3);
 }
 
 /* Card Styles */
@@ -108,6 +133,7 @@ input[type="number"]:focus {
 /* Table Styles */
 table {
   width: 100%;
+  border: 4px solid black;
   border-collapse: collapse;
   margin-top: 30px;
 }
@@ -125,7 +151,7 @@ table th {
 }
 
 table tr:nth-child(even) {
-  background: #222;
+  background: #bfbdc2;
 }
 
 table tr:hover {
@@ -144,7 +170,7 @@ table tr:hover {
 }
 
 .student-dashboard {
-  background: linear-gradient(135deg, #34495e, #5d6d7e);
+  background: linear-gradient(135deg, #5c94cc, #5287c1);
 }
 
 /* Navbar Styles */

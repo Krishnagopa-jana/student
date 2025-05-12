@@ -1,0 +1,43 @@
+.visualization-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: var(--color-light);
+}
+
+.visualization-page h3 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.chart-container {
+  width: 220%;
+  max-width: 1200px;
+  height: 500px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.back-button1 {
+  align-self: flex-start;
+  background-color: #E6E6FA !important;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border-top: #7323ca;
+  margin-bottom: 0rem;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #7323ca; /* slightly darker lavender */
+}

@@ -69,6 +69,17 @@ router.get('/all-subjects', async (req, res) => {
   }
 });
 
+router.get('/my-subjects', verifyToken, async (req, res) => {
+  try {
+    const teacheremail = req.user.email;
+    const subjects = await Subject.find({ teacheremail });
+    res.status(200).json(subjects);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error while fetching teacher's subjects" });
+  }
+});
+
 router.delete('/delete/:id', verifyToken, async (req, res) => {
   try {
     const subject = await Subject.findByIdAndDelete(req.params.id);

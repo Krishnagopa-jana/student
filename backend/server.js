@@ -22,7 +22,7 @@ const authRoutes = require('./routes/authRoutes');
 // Use Routes
 app.use('/api/student', studentRoutes);
 app.use('/api/teacher', teacherRoutes);
-app.use('/api', marksRoutes);
+app.use('/api/marks', marksRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/auth', authRoutes);

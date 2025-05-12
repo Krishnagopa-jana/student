@@ -5,15 +5,26 @@ export default function ManageTeachers() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h2>Manage Teachers</h2>
-      
-      <button onClick={() => navigate('/add-teacher')} style={{ marginRight: '10px' }}>
-        Add Teacher
+    <div style={{ position: 'relative' }}>
+      {/* Go Back Button outside admin-main */}
+      <button
+        className="back-button-fixed"
+        onClick={() => navigate('/admin')}
+      >
+        ← Go Back
       </button>
-      <button onClick={() => navigate('/teacher-list')}>
-        Teacher List
-      </button>
+
+    <div className="admin-main">
+      <h2 className="admin-section-title">Manage Teachers</h2>
+      <div className="manage-buttons">
+        <button className="admin-button" onClick={() => navigate('/add-teacher')}>
+          Add Teacher
+        </button>
+        <button className="admin-button" onClick={() => navigate('/teacher-list')}>
+          View Teacher List
+        </button>
+      </div>
+    </div>
     </div>
   );
 }
