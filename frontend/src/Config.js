@@ -1,3 +1,3 @@
-const BASE_URL = "http://localhost:5000"; // Yahan aap production URL bhi use kar sakte ho
+const BASE_URL = "https://student-8nji.onrender.com"; // Yahan aap production URL bhi use kar sakte ho
 
 export default BASE_URL;
