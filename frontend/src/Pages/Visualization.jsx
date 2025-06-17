@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import BASE_URL from '../Config';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer
 } from 'recharts';
@@ -14,7 +15,7 @@ const Visualization = () => {
     const fetchMarks = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/marks/my-marks', {
+        const res = await axios.get(`${BASE_URL}/api/marks/my-marks`, {
           headers: {
             Authorization: `Bearer ${token}`
           }

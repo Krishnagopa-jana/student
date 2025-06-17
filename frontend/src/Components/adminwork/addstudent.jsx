@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ✅ Import this
 import axios from 'axios';
+import BASE_URL from '../../Config';
 
 export default function AddStudent() {
   const navigate = useNavigate(); // ✅ Initialize it
@@ -13,7 +14,7 @@ export default function AddStudent() {
   const addStudent = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post(`${BASE_URL}/api/auth/register`, {
         name: form.name,
         email: form.email,
         password: form.password,

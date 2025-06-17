@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ✅ Import
 import axios from 'axios';
+import BASE_URL from '../../Config';
 
 export default function StudentList() {
   const navigate = useNavigate(); // ✅ Initialize navigate
@@ -12,7 +13,7 @@ export default function StudentList() {
 
   const fetchStudents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/auth/students');
+      const res = await axios.get(`${BASE_URL}/api/auth/students`);
       setStudents(res.data);
     } catch (error) {
       console.error('Error fetching students:', error);
@@ -21,7 +22,7 @@ export default function StudentList() {
 
   const removeStudent = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/auth/students/${id}`);
+      await axios.delete(`${BASE_URL}/api/auth/students/${id}`);
       alert('Student Removed');
       fetchStudents();
     } catch (error) {

@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../Config";
 import "../css/teacherdashboard.css";
 
 function TeacherDashboard() {
@@ -12,7 +13,7 @@ function TeacherDashboard() {
   useEffect(() => {
     const fetchTeacher = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/teacher/me", {
+        const res = await axios.get(`${BASE_URL}/api/teacher/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTeacher(res.data);

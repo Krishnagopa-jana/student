@@ -3,6 +3,7 @@ import axios from "axios";
 import { AuthContext } from "../Context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../css/StudentDashboard.css";
+import BASE_URL from "../Config";
 import { PieChart, Pie, Cell, Tooltip, Legend, BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
 
 const COLORS = ["#3742fa", "#FF8042"];
@@ -18,7 +19,7 @@ function StudentDashboard() {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/student/me", {
+        const res = await axios.get(`${BASE_URL}/api/student/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStudentData(res.data);
@@ -34,7 +35,7 @@ function StudentDashboard() {
   useEffect(() => {
     const fetchMarks = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/marks/my-marks", {
+        const res = await axios.get(`${BASE_URL}/api/marks/my-marks`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         // Convert to percentage for visualization

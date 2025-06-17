@@ -1,8 +1,9 @@
 import { useState, useContext } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
-import '../css/Login.css';
+import BASE_URL from "../Config";
+import "../css/Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post(`${BASE_URL}/api/auth/login`, {
         email,
         password,
       });
@@ -27,6 +28,7 @@ function Login() {
         navigate("/admin");
       }
     } catch (err) {
+      console.log(err);
       alert("Invalid Credentials");
     }
   };
@@ -34,27 +36,36 @@ function Login() {
   return (
     <div className="login-background">
       <div className="overlay">
-        <div className="project-title">Mrs.Qalam</div>
         <div className="login-container">
           <div className="login-box">
             <h2>Login Page</h2>
-            <input 
-              type="text" 
-              placeholder="Email" 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
+            <input
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="input-field"
             />
-            <input 
-              type="password" 
-              placeholder="Password" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="input-field"
             />
-            <button onClick={handleLogin} className="login-btn">Login</button>
+            <button onClick={handleLogin} className="login-btn">
+              Login
+            </button>
+            <p style={{ marginTop: "15px", color: "#fff" }}>
+              Don't have an account?{" "}
+              <a
+                href="/register"
+                style={{ color: "#64b5f6", textDecoration: "underline" }}
+              >
+                Register
+              </a>
+            </p>
           </div>
-          <p className="credit-line">Project by Esha Shabbir and Abeera Amir</p>
         </div>
       </div>
     </div>

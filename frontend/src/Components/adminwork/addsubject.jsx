@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // ✅ Import
 import { AuthContext } from "../../Context/AuthContext";
+import BASE_URL from "../../Config";
 
 export default function AddSubject() {
   const navigate = useNavigate(); // ✅ Initialize
@@ -23,7 +24,7 @@ export default function AddSubject() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/subjects/register",
+        `${BASE_URL}/api/subjects/register`,
         newSubject,
         {
           headers: { Authorization: `Bearer ${token}` },

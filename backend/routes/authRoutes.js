@@ -1,12 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const User = require('../models/User');
-const Student = require('../models/student');
-const Admin = require('../models/admin');
-const Teacher = require('../models/Teacher');
-const Subject = require('../models/Subject'); // <-- Import Subject model
+const User = require("../models/User");
+const Student = require("../models/student");
+const Admin = require("../models/admin");
+const Teacher = require("../models/Teacher");
+const Subject = require("../models/Subject"); // <-- Import Subject model
 //const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 // Register
 router.post("/register", async (req, res) => {
@@ -14,7 +14,17 @@ router.post("/register", async (req, res) => {
     const users = Array.isArray(req.body) ? req.body : [req.body]; // always treat as an array
 
     for (const userData of users) {
-      const { name, email, password, role, registrationNo, department, batch, gpa, subjectname } = userData;
+      const {
+        name,
+        email,
+        password,
+        role,
+        registrationNo,
+        department,
+        batch,
+        gpa,
+        subjectname,
+      } = userData;
 
       const newUser = new User({ name, email, password, role });
       await newUser.save();
@@ -30,7 +40,7 @@ router.post("/register", async (req, res) => {
           batch,
           email,
           gpa,
-          subjectname: finalSubjects
+          subjectname: finalSubjects,
         });
         await newStudent.save();
       }
@@ -39,7 +49,7 @@ router.post("/register", async (req, res) => {
         const newTeacher = new Teacher({
           userId: newUser._id,
           name,
-          email
+          email,
         });
         await newTeacher.save();
       }
@@ -48,46 +58,44 @@ router.post("/register", async (req, res) => {
         const newAdmin = new Admin({
           userId: newUser._id,
           name,
-          email
+          email,
         });
         await newAdmin.save();
       }
     }
 
     res.status(201).json({ message: "User(s) registered successfully" });
-
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // Login
-router.post('/login', async (req, res) => {
+router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
     const user = await User.findOne({ email });
-    if (!user) return res.status(404).json({ message: 'User not found' });
+    if (!user) return res.status(404).json({ message: "User not found" });
 
     if (user.password !== password) {
-      return res.status(401).json({ message: 'Invalid credentials' });
+      return res.status(401).json({ message: "Invalid credentials" });
     }
 
     const token = jwt.sign(
       { id: user._id, role: user.role },
-      'your_jwt_secret',
-      { expiresIn: '1h' }
+      "yqQ$Lla^iV98v4k",
+      { expiresIn: "1h" }
     );
 
     res.json({ token, role: user.role });
-
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // ✅ Get All Students
-router.get('/students', async (req, res) => {
+router.get("/students", async (req, res) => {
   try {
     const students = await Student.find();
     res.json(students);
@@ -97,23 +105,23 @@ router.get('/students', async (req, res) => {
 });
 
 // ✅ Delete Student
-router.delete('/students/:id', async (req, res) => {
+router.delete("/students/:id", async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
-    if (!student) return res.status(404).json({ message: 'Student not found' });
+    if (!student) return res.status(404).json({ message: "Student not found" });
 
     // Delete user too
     await User.findByIdAndDelete(student.userId);
     await Student.findByIdAndDelete(req.params.id);
 
-    res.json({ message: 'Student removed' });
+    res.json({ message: "Student removed" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // ✅ Get All Teachers
-router.get('/teachers', async (req, res) => {
+router.get("/teachers", async (req, res) => {
   try {
     const teachers = await Teacher.find();
     res.json(teachers);
@@ -123,22 +131,22 @@ router.get('/teachers', async (req, res) => {
 });
 
 // ✅ Delete Teacher
-router.delete('/teachers/:id', async (req, res) => {
+router.delete("/teachers/:id", async (req, res) => {
   try {
     const teacher = await Teacher.findById(req.params.id);
-    if (!teacher) return res.status(404).json({ message: 'Teacher not found' });
+    if (!teacher) return res.status(404).json({ message: "Teacher not found" });
 
     await User.findByIdAndDelete(teacher.userId);
     await Teacher.findByIdAndDelete(req.params.id);
 
-    res.json({ message: 'Teacher removed' });
+    res.json({ message: "Teacher removed" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 // ✅ Get All Subjects
-router.get('/subjects', async (req, res) => {
+router.get("/subjects", async (req, res) => {
   try {
     const subjects = await Subject.find();
     res.json(subjects);
@@ -146,8 +154,5 @@ router.get('/subjects', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
-
-
 
 module.exports = router;

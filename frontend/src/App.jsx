@@ -18,6 +18,7 @@ import AddTeacher from "./Components/adminwork/addteacher";
 import TeacherList from "./Components/adminwork/teacherslist";
 import AddSubject from "./Components/adminwork/addsubject";
 import SubjectList from "./Components/adminwork/subjectlist";
+import Register from "./Pages/Register";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
           <Route
             path="/student"

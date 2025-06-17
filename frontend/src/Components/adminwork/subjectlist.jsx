@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ Import
 import axios from "axios";
 import { AuthContext } from "../../Context/AuthContext";
+import BASE_URL from "../../Config";
 
 function SubjectList() {
   const navigate = useNavigate(); // ✅ Initialize navigate
@@ -11,7 +12,7 @@ function SubjectList() {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/subjects/all-subjects", {
+        const res = await axios.get(`${BASE_URL}/api/subjects/all-subjects`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSubjects(res.data.subjects);
@@ -25,11 +26,12 @@ function SubjectList() {
   const handleRemove = async (id) => {
     if (window.confirm("Are you sure you want to delete this subject?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/subjects/delete/${id}`, {
+        await axios.delete(`${BASE_URL}/api/subjects/delete/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSubjects(subjects.filter((s) => s._id !== id));
       } catch (err) {
+        console.log(err);
         alert("Failed to delete subject.");
       }
     }

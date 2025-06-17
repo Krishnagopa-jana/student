@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import axios from "axios";
+import BASE_URL from "../Config";
 import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 
@@ -18,7 +19,7 @@ function EnterMarks() {
     const fetchStudents = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/teacher/students-for-subject/${subjectName}`,
+          `${BASE_URL}/api/teacher/students-for-subject/${subjectName}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -51,7 +52,7 @@ function EnterMarks() {
         const obtainedMarks = marks[student._id];
         if (obtainedMarks !== undefined) {
           await axios.post(
-            "http://localhost:5000/api/teacher/add-marks",
+            `${BASE_URL}/api/teacher/add-marks`,
             {
               studentId: student._id,
               subjectName,

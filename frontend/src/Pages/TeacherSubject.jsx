@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../Config";
 import "../css/teacherdashboard.css"; // Uses your provided CSS
 
 function TeacherSubjects() {
@@ -12,7 +13,7 @@ function TeacherSubjects() {
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/teacher/my-subjects", {
+        const res = await axios.get(`${BASE_URL}/api/teacher/my-subjects`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setSubjects(res.data);

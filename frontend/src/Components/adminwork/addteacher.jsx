@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // ✅ Import
 import axios from 'axios';
+import BASE_URL from '../../Config';
 
 export default function AddTeacher() {
   const navigate = useNavigate(); // ✅ Initialize navigation
@@ -10,7 +11,7 @@ export default function AddTeacher() {
   const addTeacher = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post(`${BASE_URL}/api/auth/register`, {
         ...form,
         role: 'teacher',
       });

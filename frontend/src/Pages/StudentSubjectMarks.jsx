@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../Context/AuthContext";
+import BASE_URL from "../Config";
 
 
 function SubjectMarks() {
@@ -15,7 +16,7 @@ function SubjectMarks() {
   const fetchMarks = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/student/my-marks/${subjectName}`,
+        `${BASE_URL}/api/student/my-marks/${subjectName}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -35,7 +36,7 @@ function SubjectMarks() {
       await Promise.all(
         types.map(async (type) => {
           const res = await axios.get(
-            `http://localhost:5000/api/student/subject-average/${subjectName}/${type}`,
+            `${BASE_URL}/api/student/subject-average/${subjectName}/${type}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
